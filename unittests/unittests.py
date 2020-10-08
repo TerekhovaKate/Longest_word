@@ -6,12 +6,10 @@
 Unittests for FindTheLargestWord object
 """
 
-
-from __future__ import absolute_import
-
 import unittest
 from pathlib import Path
 from file_parser import FindTheLargestWord
+
 THISDIR = Path(__file__).resolve().parent
 
 SUFFIX_FILE = "test_file.txt"
