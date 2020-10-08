@@ -35,7 +35,7 @@ class TestStringMethods(unittest.TestCase):
         self.assertTrue(data_test == expected)
 
     def test_clean_raw_data_with_symbols_1(self):
-        self.file.raw_data = ['Saint-Petersburg', "asjbdsa=?,"]
+        self.file.raw_data = ['Saint-Petersburg']
         clean_word = self.file.clean_raw_data()[0]
         self.assertTrue(clean_word == "Saint-Petersburg")
 
