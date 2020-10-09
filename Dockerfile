@@ -3,12 +3,14 @@
 FROM python:3.7-slim-stretch
 
 # Set environment variables.
-ENV HOME /file_words
+
+ENV HOME /longest_word
 
 # Define working directory.
-WORKDIR /file_words
+WORKDIR /longest_word
 RUN pip3 install --upgrade pip
-ADD Longest_word .
+ADD . longest_word
+ADD unittests /
 
 # add entrypoint to docker
 ENTRYPOINT ["python"]
