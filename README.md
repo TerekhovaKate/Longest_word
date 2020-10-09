@@ -42,6 +42,9 @@ Option 2 - Docker Image: Python Interpreter running inside a Docker Image
 
     2.1 run test with docker container
 
-        docker run -it parser:0.0.1 python file_parser.py
+        docker run -it -v /tmp:/tmp parser:0.0.1 python file_parser.py --file /tmp/install.txt
+                `specify the input for  custom .txt file specify the input for  custom .txt file`
+
+        docker run -it parser:0.0.1 python file_parser.py -> `will use default .txt insade the container`
         docker run -it parser:0.0.1 python -m unittest unittests/unittests.py
         docker run -it parser:0.0.1 python -m unittest
