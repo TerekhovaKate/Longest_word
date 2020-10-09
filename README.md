@@ -8,7 +8,7 @@ requires python 3.6 or python 3.7
 Note: not compatible with 3.9
 
 ```bash
-$ git clone https://github.com/TerekhovaKate/Longest_word.git
+$ git clone https://github.com/TerekhovaKate/longest_word.git
 
 ```
 
