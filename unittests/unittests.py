@@ -44,6 +44,9 @@ class TestStringMethods(unittest.TestCase):
         clean_word = self.file.clean_raw_data()[0]
         self.assertTrue(clean_word == "asjbdsa")
 
+    def tearDown(self):
+        pass
+
 
 class TestStringMethodsNegative(unittest.TestCase):
 

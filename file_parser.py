@@ -23,12 +23,12 @@ class FindTheLargestWord():
         :return: the list of spited words
         """
         try:
-            logging.debug("Opening file {}".format(file))
+            logging.info("+++++++++++++++++\n Opening file {} \n+++++++++++++++++".format(file))
             with open(file, encoding="utf-8") as file:
                 words = file.read().split()
                 return words
         except Exception as e:
-            logging.error(e)
+            logging.error("Expected error: {}".format(e))
             exit(-1)
 
     def clean_raw_data(self):
@@ -48,7 +48,7 @@ class FindTheLargestWord():
             logging.debug("The maximum characters length {}".format(le))
             return [x for x in new_list if len(x) == le]
         else:
-            logging.error("The file is empty. No input data")
+            logging.error("Expected error: The file is empty. No input data")
             exit(-1)
 
     def reverse_words(self):

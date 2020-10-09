@@ -32,19 +32,22 @@ python3 -m unittest unittests/unittests.py
 ### Docker
 Option 2 - Docker Image: Python Interpreter running inside a Docker Image
 
-    build a Docker container
+build a Docker container
 
-        docker build -t <tag_name>:<tag> .
+    docker build -t <tag_name>:<tag> .
 
-    example
+example
 
-        docker build -t parser:0.0.1 .
+    docker build -t parser:0.0.1 .
 
-    2.1 run test with docker container
+2.1 run test with docker container
 
-        docker run -it -v /tmp:/tmp parser:0.0.1 python file_parser.py --file /tmp/install.txt
-                `specify the input for  custom .txt file specify the input for  custom .txt file`
+    2.1.1 specify the input for  custom .txt file specify the input for  custom .txt file
+    docker run -it -v /tmp:/tmp parser:0.0.1 python file_parser.py --file /tmp/<file from local /tmp>
 
-        docker run -it parser:0.0.1 python file_parser.py -> `will use default .txt insade the container`
-        docker run -it parser:0.0.1 python -m unittest unittests/unittests.py
-        docker run -it parser:0.0.1 python -m unittest
+    2.1.2. docker run will use default .txt insade the container
+    docker run -it parser:0.0.1 python file_parser.py
+
+    2.1.3. docker run for unit testing
+    docker run -it parser:0.0.1 python -m unittest unittests/unittests.py
+
